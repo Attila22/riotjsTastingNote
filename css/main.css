@@ -1,0 +1,192 @@
+  
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  #wrapper{
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 5%;
+
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h3 {
+    margin: 0 0 1em 0; /* Give a small margin between about and text */
+  }
+  
+  /* Heading */
+  
+  header {
+    float: left;
+    margin: 0 0 30px 0;
+    padding: 5px 0 0 0;
+    width: 100%;
+  }
+  #logo
+  {
+    text-align: center;
+    margin: 0;
+  }
+  
+  h1{
+    font-family: 'Changa One', sans-serif;
+    margin: 15px 0;
+    font-size: 1.75em;
+    font-weight: normal;
+  }
+  
+  h2{
+      font-family: 'Changa One', sans-serif;
+    font-size: 1.75em;
+    margin: 15px 0;
+    font-weight: normal;
+      text-align: center;
+  }
+  
+  /* Navigation*/
+  
+  nav{
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    
+  }
+  
+  nav a{
+    font-weight: 800;
+    padding: 15px 10px;
+  }
+    
+  
+  /*footer */
+  footer{
+    font-size: 0.75em;
+    text-align: center; 
+    clear: both;
+    padding-top: 50px;
+    color: #ccc;
+  }
+  .social-icon {
+   
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    
+  }
+  
+  /*another page*/
+  
+  #gallery{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #gallery li{
+    float: center;
+    width: 45%;
+    margin: 2.5%;
+    background-color: #f2f2f2;
+    color: #bdc3c7;
+  }
+  
+  #gallery li a p{
+    margin: 0;
+    padding: 5%;
+    font-size: 0.75em;
+    color: #955251;
+
+  }
+  
+  /* PAGE: 2 */
+  
+  .profile-photo{
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 30px;
+    border-radius: 100%; /* Sets the picture to a circle, 20% sets it to a rounded square remember to make notes of this*/
+  }
+  
+  /* PAGE: 3 */
+  
+  .contact-info{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+  }
+  
+  .contact-info a{
+    display: block; /* each one of images or anchor elements will take up space that will give us more space to work with so our images have a place to be displayed */
+    min-height: 20px; /*minimum height at which our icons will be fully visible, don't want them any shorter */
+    background-repeat: no-repeat; /*background images in css always repeat by default but we only want it to show once, therefore no repeat */
+    background-size: 20px 20px; /* Images slightly larger than they need to be, larger images that are shrinked look good */
+    padding: 0 0 0 30px; /*want extra space on elements left side because that's where the images are going to go */
+    margin: 0 0 10px; /* Add 10 px on the bottom to give each link seperation */
+  }
+  .contact-info li.phone a{
+    background-image: url("/Users/charlie/WebstormProjects/riotTastingNote/img/phone.png")
+  }
+  
+  .contact-info li.mail a{
+    background-image: url("/Users/charlie/WebstormProjects/riotTastingNote/img/mail.png");
+  }
+  
+  .contact-info li.twitter a{
+    background-image: url("/Users/charlie/WebstormProjects/riotTastingNote/img/twitter.png");
+  }
+  
+  
+  
+  
+    /*Colors*/
+  a{
+    color: #955251;
+  }
+  
+  header{
+      background: #f2f2f2;
+      border-color:#955251;
+  }
+  
+  h1, h2{
+
+    color:#955251;
+  }
+  
+  nav{
+    background: #955251;
+  }
+  
+  nav a, nav a:visited {
+    color: #955251;
+  }
+  
+  nav a.selected, nav a:hover{
+    color:#955251;
+  }
+  
+  body{
+    background-color: #f2f2f2;
+    color: #999;
+  }
+  
+  

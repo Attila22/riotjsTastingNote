@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+        <title> MyiCellar| RiotJS</title>
+        <link href='https://fonts.googleapis.com/css?family=Changa+One|Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" id="logo">
+                <h1> MyICellar</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="selected">Tasting Note</a></li>
+                    <li><a href="">Submit a review</a></li>
+                    <li><a href="">Order</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <h2>Wines</h2>
+
+        <tasting-note></tasting-note>
+
+
+
+        <script src="bower_components/riot/riot.js"></script>
+        <script src="tags/all.js"></script>
+        <script>
+            riot.mount('tasting-note', {callback:tagCallback})
+
+            function tagCallback(wines){
+                console.log('callback executed')
+                var request = new XMLHttpRequest()
+                request.open('POST','http://localhost:8888/1/eng/a/WineryRegion/Summary',true)
+                //request.open('GET','content.json', true)
+                request.setRequestHeader("Content-type", "application/json")
+                request.onload = function(){
+                    if(request.status == 200){
+                        var data = JSON.parse(request.responseText)
+                        wines.trigger('data_loaded', data.content)
+                        //console.log(request.responseText)
+
+
+                    }
+                }
+                var requestString = JSON.stringify({
+                    "header": {
+                        "userId" : "a2a37b76-98ed-11e5-8994-feff819cdaaa",
+                        "userToken" : null,
+                        "appToken" : null,
+                        "nextBatchParams" : null
+                    },
+                    "content":{}
+                })
+                request.send(requestString)
+
+            }
+        </script>
+            <footer>
+                <a href="https://www.instagram.com/myicellar/"><img src="img/instagram.png" alt="Twitter logo" class="social-icon"></a>
+                <a href="https://www.facebook.com/myicellarapp/?fref=ts"><img src ="img/facebook-wrap.png" alt="Facebook logo" class="social-icon"></a>
+                <p>&copy; 2016 MyICellar</p>
+            </footer>
+        </div>
+    </body>
+
+</html>
+
